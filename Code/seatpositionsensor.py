@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     # Give the location of the file
     path = "sensor_samples.xlsx"
-    df = pd.read_excel(path, usecols="B:G", skiprows=0, nrows=165)
+    df = pd.read_excel(path, usecols="B:G", skiprows=0)
     new_column = np.full((df.shape[0], 1), -1)  # Create a new column filled with -1 values
     numpy_array_with_new_column = np.column_stack( (df, new_column))  # Stack the new column with the existing array
 
